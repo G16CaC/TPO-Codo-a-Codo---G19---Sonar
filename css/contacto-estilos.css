@@ -1,0 +1,172 @@
+/* Estilos de la página de Contacto */
+
+/* Eliminar estilos por defecto */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: "Lato", sans-serif;
+    min-width: 350px;
+}
+
+body{
+    background-image: url(/imagenes/banners/hero-banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 80px 0px 0px 0px;
+    margin-bottom: 30px;
+}
+
+/* Utilizamos flexbox y seteamos la direccion en columnas */
+.contacto-encabezado{
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto-encabezado, .formulario{
+    text-align: center;
+}
+
+.contacto-titulo{
+    font-size: 3em;
+    margin: 10px 0px 0px 0px;
+}
+
+.contacto-descripcion{
+    font-size: 1.2em;
+    margin: 0;
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    background-color:rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+fieldset {
+    margin-bottom: 20px;
+    border: none;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 0.8em;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 0.8em;
+    background-color: #fff;
+}
+
+#contacto-terminos{
+    margin-right: 10px;
+}
+
+.contacto-terminos{
+    text-align: left;
+    font-size: 1em;
+}
+
+#contacto-submit{
+    background-image: linear-gradient(#59443b, rgba(0, 0, 0, 0.87));
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#contacto-submit:hover{
+    background-image: linear-gradient(#ffffff, #59443b);
+    color: #59443b;
+    font-weight: bold;
+}
+
+.error-message {
+    color: red;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 5px;
+    display: block;
+}
+
+/* ------------------------------------- */
+/* Estilos para dispositivos hasta 568px */
+/* ------------------------------------- */
+@media screen and (max-width: 568px) {
+    .contacto-titulo {
+        font-size: 2em;
+    }
+    .contacto-descripcion {
+        font-size: 1.1em;
+    }
+    section {
+        max-width: 420px;
+        padding: 30px;
+    }
+    label, #contacto-submit {
+        font-size: 1em;
+    }
+    textarea {
+        font-size: 1.2em;
+    }
+    .contacto-terminos, .contacto-copyright{
+        font-size: 0.8em;
+    }
+}
+
+/* ------------------------------------- */
+/* Estilos para dispositivos hasta 991px */
+/* ------------------------------------- */
+@media screen and (min-width: 569px) and (max-width: 991px) {
+    .contacto-titulo {
+        font-size: 2.5em;
+    }
+    .contacto-descripcion {
+        font-size: 1.3em;
+    }
+    section {
+        max-width: 500px;
+        padding: 30px;
+    }
+    label, select {
+        font-size: 0.9em;
+    }
+    textarea, #contacto-submit {
+        font-size: 1.1em;
+    }
+    .contacto-terminos, .contacto-copyright{
+        font-size: 0.8em;
+    }
+}

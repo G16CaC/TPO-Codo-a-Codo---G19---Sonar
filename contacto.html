@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/imagenes/logos/logo-sitio/favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/32d4496ecd.js" crossorigin="anonymous"></script>
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="/css/estilos.css">
+    <link rel="stylesheet" href="/css/contacto-estilos.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <!-- Checkbox para capturar el estado del menu en dispositivos moviles -->
+            <!-- Utilizado para crear un menu hamburguesa -->
+            <input type="checkbox" id="check">
+            <label for="check" class="check-btn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <a href="index.html" class="nav-logo">
+                <img class="logo" src="imagenes/logos/logo-sitio/sonar-logo.png" alt="sonar-logo">
+            </a>
+            <ul>
+                <li><a class="activo" href="index.html">Inicio</a></li>
+                <li><a href="buscador.html">Buscar</a></li>
+                <li><a href="index.html#tienda">Tienda</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contacto-encabezado">
+        <h1 class="contacto-titulo">Contáctanos</h1>
+        <p class="contacto-descripcion">Ayúdanos a mejorar nuestros servicios</p>
+    </section>
+
+    <section class="formulario">
+        <form id="contacto-form" class="form-contacto" action="https://formspree.io/f/mayzkrov" method="POST">
+            <fieldset id="datos">
+                <label for="nombre" id="nombre-label">Nombre: <input type="text" id="nombre-contacto"
+                        placeholder="Ingresa tu Nombre" name="nombre_contacto"></label>
+                <label for="apellido" id="apellido-label">Apellido: <input type="text" id="apellido-contacto"
+                        placeholder="Ingresa tu Apellido" name="apellido_contacto"></label>
+                <label for="email" id="email-label">Correo Electrónico: <input type="email" id="email-contacto"
+                        placeholder="Ingresa tu Correo Electrónico" name="email_contacto"></label>
+                <hr>
+            </fieldset>
+
+            <fieldset id="opciones">
+                <label id="opciones-label">¿Cómo podemos ayudarte?
+                    <select name="seleccion_contacto" id="seleccion-contacto">
+                        <option value="">Selecciona una opción</option>
+                        <option value="Deseo dejarles una sugerencia...">Deseo dejarles una sugerencia...</option>
+                        <option value="Quiero un producto en particular...">Quiero un producto en particular...</option>
+                        <option value="¿Hacen envíos a mi localidad?...">¿Hacen envíos a mi localidad?...</option>
+                        <option value="No recibí mi producto...">No recibí mi producto...</option>
+                        <option value="Mi producto no funciona ¿Cómo procedo?">Mi producto no funciona ¿Cómo procedo?</option>
+                        <option value="Me arrepentí de la compra...">Me arrepentí de la compra...</option>
+                    </select>
+            </fieldset>
+
+            <fieldset>
+                <label class="sugerencias-label">Déjanos tu mensaje:
+                    <textarea name="sugerencias_contacto" id="sugerencias-contacto" cols="30" rows="10"
+                        placeholder="Escríbenos..."></textarea>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <label class="contacto-terminos">
+                    <input type="checkbox" name="terminos" id="contacto-terminos" value="terminos" required> Acepto
+                    compartir mis datos personales
+                </label>
+                <input type="submit" id="contacto-submit" value="Enviar mensaje">
+            </fieldset>
+
+            <p class="contacto-copyright">Sonar © - 2023 - Todos los derechos reservados</p>
+
+            <!-- Scripts para conectar al servicio de EmailJS para el envio de correos capturando el correo electrónico 
+            del usuario que se suscribe al newsletter -->
+            <script type="text/javascript"
+                src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+            <script type="text/javascript">
+                emailjs.init('yE6xcu-BTxCFYdgGa')
+            </script>
+        </form>
+
+    </section>
+
+    <!-- Javascript -->
+    <script src="validacion-contacto.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador</title>
+    <!-- Favicon -->
+    <link rel="icon" href="/imagenes/logos/logo-sitio/favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/32d4496ecd.js" crossorigin="anonymous"></script>
+    <!-- Hojas de Estilos -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/footer-estilos.css">
+    <link rel="stylesheet" href="css/buscador-estilos.css">
+
+</head>
+
+<body>
+    <header>
+
+        <!-- Menú de Navegación -->
+        <nav class="nav">
+            <!-- Checkbox para capturar el estado del menu en dispositivos moviles -->
+            <!-- Utilizado para crear un menu hamburguesa -->
+            <input type="checkbox" id="check">
+            <label for="check" class="check-btn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+            <a href="index.html" class="nav-logo">
+                <img class="logo" src="imagenes/logos/logo-sitio/sonar-logo.png" alt="sonar-logo">
+            </a>
+            <ul>
+                <li><a class="activo" href="index.html">Inicio</a></li>
+                <li><a href="buscador.html">Buscar</a></li>
+                <li><a href="index.html#tienda">Tienda</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
+</body>
+
+<section id="app-consulta">
+    <h1>Discografías</h1>
+    <h2>Ingresa el nombre del artista o álbum que deseas obtener</h2>
+    <section class="contenedor-busqueda">
+        <input class="busqueda" type="text" v-model="consultaBusqueda" placeholder="Ingrese el nombre del artista">
+        <button class="busqueda-btn" @click="buscarArtista">Buscar</button>
+    </section>
+    <section class="contenedor-resultados">
+        <article v-for="album in albums" :key="album.id" class="tarjeta-album">
+            <img :src="album.image" alt="Carátula del álbum">
+            <article class="album-info">
+                <h3>{{ album.title }}</h3>
+                <p>Fecha de lanzamiento: {{ album.releaseDate }}</p>
+            </article>
+        </article>
+        <article v-if="albums.length === 0" class="sin-resultados">Sin resultados para mostrar.</article>
+    </section>
+</section>
+
+<!-- Sección Pié de Página -->
+<footer id="footer">
+    <!-- Newsetter y Redes Sociales -->
+    <section class="contenedor-newsletter">
+        <section class="contenido-newsletter">
+            <h2>Suscríbete a nuestro Newsletter</h2>
+            <form id="form-news" action="https://formspree.io/f/mrgvvzkg" method="POST">
+                <input id="email-news" class="email-newsletter" type="email" name="email_newsletter"
+                    placeholder="Ingresa tu correo electrónico">
+                <input class="btn-newsletter" type="submit" value="Suscribirse">
+                <p class="advertencia-news" id="advertencia-news"></p>
+                <p class="mensaje-exito-news" id="mensaje-exito-news"></p>
+
+                <!-- Scripts para conectar al servicio de EmailJS para el envio de correos capturando el correo electrónico 
+                    del usuario que se suscribe al newsletter -->
+                <script type="text/javascript"
+                    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+                <script type="text/javascript">
+                    emailjs.init('yE6xcu-BTxCFYdgGa')
+                </script>
+
+            </form>
+        </section>
+
+        <section class="contenido-redes">
+            <h2>Seguinos en nuestras redes!!!</h2>
+            <section class="redes">
+                <a href="https://es-la.facebook.com/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-square-youtube"></i></a>
+                <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-square-twitter"></i></a>
+                <a href="https://ar.pinterest.com/" target="_blank"><i class="fa-brands fa-square-pinterest"></i></a>
+            </section>
+        </section>
+
+    </section>
+
+    <!-- Pié de Página -->
+    <section class="contenedor-links">
+        <article class="footer-links">
+            <h3>Contáctanos</h3>
+            <ul class="info">
+                <li>
+                    <span><i class="fa-solid fa-location-dot"></i></span>
+                    <span>Av. 9 de Julio - CABA</span>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-phone"></i></span>
+                    <span>+54 9 11 4578 2569</span>
+                </li>
+                <li>
+                    <span><i class="fa-brands fa-whatsapp"></i></span>
+                    <span>+54 9 381 5 574 005</span>
+                </li>
+                <li>
+                    <span><i class="fa-solid fa-envelope"></i></span>
+                    <span>hola@sonar.com.ar</span>
+                </li>
+            </ul>
+        </article>
+
+        <article class="footer-links footer-nav-link">
+            <h3>Información de interés</h3>
+            <p>
+            <ul>
+                <li><a href="#">Términos y condiciones</a></li>
+                <li><a href="#">Políticas de privacidad</a></li>
+                <li><a href="#">Políticas de cookies</a></li>
+                <li><a href="#">Arrepentimiento de compra</a></li>
+            </ul>
+        </article>
+
+        <article class="footer-links footer-nav-link">
+            <h3>Acerca de Sonar</h3>
+            <ul>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="#">Preguntas frecuentes</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </article>
+
+        <article class="footer-links footer-nav-link">
+            <h3>Acceso Clientes</h3>
+            <ul>
+                <li><a href="#">Mi cuenta</a></li>
+                <li><a href="#">Lista de deseos</a></li>
+                <li><a href="#">Seguimiento de pedidos</a></li>
+            </ul>
+        </article>
+    </section>
+
+    <!-- Copyright -->
+    <section class="copyright">
+        <p>SONAR <i class="fa-regular fa-copyright"></i> 2023 - Todos los Derechos Reservados</p>
+        <a href="index.html">
+            <img class="logo-footer" src="imagenes/logos/logo-sitio/sonar-logo.png" alt="sonar-logo">
+        </a>
+        <p>Diseño y Desarrollo G19-CaC</p>
+    </section>
+</footer>
+
+<!-- Javascript -->
+<script src="validaciones-newsletter.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+<script src="buscador.js"></script>
+
+</html>

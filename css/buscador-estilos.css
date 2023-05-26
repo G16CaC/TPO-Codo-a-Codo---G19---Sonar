@@ -1,0 +1,124 @@
+/* Estilos de la página de Búsqueda */
+
+/* Eliminar estilos por defecto */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    padding: 80px 0px 0px 0px;
+    margin: 20px 0px 0px 0px;
+}
+
+.contenedor-busqueda {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 8% 0;
+    border-radius: .5rem;
+    padding: 1rem 0;
+    background-color: #fafafa;
+    box-shadow: 0 1rem 2rem .5rem #dedede;
+    border-top: .5rem solid #59443b;
+}
+
+#app-consulta h1 {
+    text-align: center;
+    font-size: 2em;
+    margin: 10px 0px 0px 0px;
+    color: #59443b;
+}
+
+#app-consulta h2{
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 10px;
+    color: #59443b;
+}
+
+.busqueda {
+    width: 40%;
+    height: 20px;
+    padding: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border-radius: 5px;
+    border-color: #59443b;
+}
+
+.busqueda-btn {
+    margin-top: 20px;
+    width: 30%;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #59443b;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+}
+
+.busqueda-btn:hover {
+    cursor: pointer;
+    color: #59443b;
+    background-color: #fff;
+    border: 2px solid #59443b;
+}
+
+.contenedor-resultados {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.tarjeta-album {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0,0,0,0.18);
+}
+
+.tarjeta-album:hover {
+    transform: translateY(-2%);
+    transition: .5s ease;
+}
+
+.tarjeta-album img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.album-info h3 {
+    margin-top: 0;
+    color: #59443b;
+}
+
+.album-info p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #59443b;
+}
+
+.sin-resultados {
+    text-align: center;
+    color: #888;
+}
+
+/* Estilos para dispositivos hasta 568px */
+@media screen and (max-width: 568px){
+    .busqueda {
+        width: 50%;
+    }
+
+}

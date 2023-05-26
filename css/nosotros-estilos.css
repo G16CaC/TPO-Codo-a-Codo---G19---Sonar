@@ -1,0 +1,270 @@
+/* Estilos Página Nosotros */
+
+/* Eliminar estilos por defecto */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del body */
+body{
+    width: 100%;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    background-color:#fafafa;
+}
+
+/* Estilos del banner */
+.banner-nosotros{
+    background-image: url(/imagenes/banners/nosotros-banner.webp);
+    background-size: cover;
+    background-position: center center;
+    height: calc(80vh - 80px); /* Calculamos la altura del banner, restando la altura del nav */
+    margin-bottom: 10px;
+}
+
+/* Estilos Sección Nuestra Historia */
+.titulos-contenedor{
+    margin: 3.5rem 8% 0;
+}
+
+.nosotros-contenido{
+    border-radius: .5rem;
+    padding: 1rem 1.8rem;
+    margin-bottom: 3rem;
+    background-color: #fafafa;
+    box-shadow: 0 1rem 2rem .5rem #dedede;
+    border-top: .5rem solid #59443b;
+}
+
+.nosotros-img {
+    padding-top: .2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.nosotros-img i{
+    color: #59443b;
+    font-size: 60px;
+}
+
+.nosotros-titulo {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #59443b;
+    text-align: center;
+}
+ 
+.historia-descripcion{
+    color: #59443b;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+/* Estilos Sección Presentacion */
+.presentacion-contenedor{
+    margin: 3.5rem 8% 0;
+}
+
+.presentacion-contenido{
+    border-radius: .5rem;
+    padding: 1rem 1.8rem;
+    margin-bottom: 3rem;
+    background-color: #fafafa;
+    box-shadow: 0 1rem 2rem .5rem #dedede;
+    border-top: .5rem solid #59443b;
+}
+
+.presentacion-img {
+    padding-top: .2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.presentacion-img i{
+    color: #59443b;
+    font-size: 40px;
+}
+
+.presentacion-titulo {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #59443b;
+    text-align: center;
+}
+
+.descripcion{
+    color: #59443b;
+    font-size: 0.9rem;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+/* Estilos Sección Equipo */
+.equipo-contenedor{
+    width:100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-image: url(/imagenes/banners/hero-banner.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.integrante{
+    width: 350px;
+    margin: 15px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    transition: all 300ms;
+}
+
+.integrante:hover{
+    transform: translateY(-10px);
+}
+
+.integrante:hover .integrante-img img{
+    transform: scale(1.1);
+}
+
+.integrante-img{
+    width: 100%;
+    height: 180px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.integrante-img img{
+    width: 110%;
+    transition: all 300ms;
+}
+
+.integrante h2{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.integrante p{
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.integrante hr{
+    margin-top: 30px;
+    border: none;
+    height: 0.2px;
+    background: #fff;
+}
+
+.integrante-footer{
+    margin-top: 10px;
+    display: flex;
+    color: #fff;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.integrante-footer h3{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.integrante-footer-links a i{
+    color: #fff;
+    font-size: 20px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.integrante-footer-links a i:hover{
+    transform: translateY(-20%);
+    transition: .5s ease;
+}
+
+/* Estilos Sección ¿Dónde estamos? */
+.mapas-contenedor{
+    width:100%;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mapas-contenido{
+    border-radius: .5rem;
+    padding: 1rem 1.8rem;
+    margin: .8rem 2rem;
+    background-color: #fafafa;
+    box-shadow: 0 1rem 2rem .5rem #dedede;
+    border-top: .5rem solid #59443b;
+}
+
+.mapas {
+    padding-top: .2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.mapas iframe{
+    width: 300px;
+    height: 250px;
+    margin-top: 10px;
+}
+
+/* ----------------------------------------- */
+/* Estilos para dispositivos mayores a 568px */
+/* ----------------------------------------- */
+@media screen and (min-width: 568px) {
+    .presentacion-contenedor {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;       
+    }
+}
+
+/* --------------------------------------- */
+/* Estilos para dispositivos mayores 991px */
+/* --------------------------------------- */
+@media screen and (min-width: 991px) {
+    .presentacion-contenedor {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "inicio centro1 final"
+        "inicio centro2 final";       
+    }
+
+    .presentacion-mision  {
+        grid-area: inicio;
+        align-self: center;
+    }
+
+    .presentacion-pasion {
+        grid-area: centro1;
+    }
+
+    .presentacion-proyeccion {
+        grid-area: centro2;
+    }
+    
+    .presentacion-equipo {
+        grid-area: final;
+        align-self: center;
+    }
+
+    .equipo-contenedor{
+        transform: none;
+    }
+}

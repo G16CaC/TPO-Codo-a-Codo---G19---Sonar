@@ -1,0 +1,190 @@
+/* Estilos del Body - Menú de Navegación - Logo - Banner - Títulos y Subtítulos */
+
+/* Eliminar estilos por defecto */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del body */
+body{
+    width: 100%;
+    font-family: "Lato", sans-serif;
+    font-weight: 500;
+    background-color:#fafafa;
+}
+
+/* Estilos del menú de navegación */
+nav{
+    background-image: linear-gradient(#59443b, rgba(0, 0, 0, 0.87));
+    height: 80px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.nav-logo{
+    position: absolute;
+    padding: 15px 15px;
+}
+
+.logo{
+    height: 50px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;    
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 7px 13px;
+}
+
+li a:hover{
+    text-decoration: underline;
+}
+
+.check-btn{
+    font-size: 25px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+/* Estilos del banner */
+.banner{
+    background-image: url(../imagenes/banners/hero-banner.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: calc(80vh - 80px);
+    margin-bottom: 10px;
+}
+
+/* Estilos Titulos y Subtitulos */
+.titulos-contenedor{
+    margin: 3.5rem 8% 0;
+}
+
+.titulos-contenido{
+    border-radius: .5rem;
+    padding: 1rem 1.8rem;
+    margin-bottom: 3rem;
+    background-color: #fafafa;
+    box-shadow: 0 1rem 2rem .5rem #dedede;
+    border-top: .5rem solid #59443b;
+}
+
+.inicio-titulo {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #59443b;
+    text-align: center;
+}
+
+.titulos-contenido p{
+    color: #59443b;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Estilos para dispositivos hasta 568px */
+@media screen and (max-width: 568px){
+
+    /* Estilos del Menu de Navegacion */
+    .check-btn{
+        display: block;
+    }
+
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.87), #59443b);
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 70px 0;
+        line-height: 50px;
+    }
+
+    nav ul li a{
+        font-size: 1em;
+    }
+
+    li a:hover, li a.activo{
+        background: none;
+        background-image: none;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    /* Estilos de los títulos y subtítulos */
+    .inicio-titulo{
+        margin-top: 5px;
+        font-size: 1.2rem;
+    }
+
+    .titulos-contenido p{
+        margin-top: 5px;
+        font-size: .9rem;
+    }
+}
+
+/*Estilos para dispositivos hasta 991px */ 
+@media screen and (min-width: 569px) and (max-width: 991px){ 
+/* Estilos del Menu de Navegacion */
+    .nav-logo{
+        padding-left: 20px;
+    }
+
+    .nav ul li{
+        margin: 0px;      
+    }
+
+    .nav ul li a{
+        font-size: 0.9em;
+        padding: 7px 10px;
+    }
+
+    /* Estilos de los títulos y subtítulos */
+    .inicio-titulo{
+        margin-top: 5px;
+        font-size: 1.3rem;
+    }
+
+    .titulos-contenido p{
+        margin-top: 8px;
+        font-size: 1rem;
+    }
+}

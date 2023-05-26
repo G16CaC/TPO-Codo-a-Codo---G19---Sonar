@@ -1,0 +1,84 @@
+/* Estilos de la sección Infobox (Medios de pago/Envios/Atención/Garantía */
+/* Esta sección se diseñó con la metodología "Mobile First (Móviles Primero) */
+/* En su versión móvil, la seccion se maquetó con Flexbox */
+/* En las versiones para dispositivos mayores a 568px y a 991px, la maquetación se realizó con CSS Grid */
+/* En la versión de dispositivos mayores a 991px, se definieron "grid-areas" para cambiar el layout de la sección */
+
+/* Reseteamos los valores por defecto */
+* {
+    box-sizing: border-box;
+}
+
+.contenedor-infobox {
+    margin: 3.5rem 8% 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.infobox-contenido {
+    border-radius: .5rem;
+    padding: 1rem 1.8rem;
+    margin-bottom: 3rem;
+    background-color: #fafafa;
+    box-shadow: 0 1rem 2rem .5rem #dedede;
+    border-top: .5rem solid #59443b;
+}
+
+.infobox-titulo {
+    padding-top: 2px;
+    font-size: .9rem;
+    color: #59443b;
+    text-align: center;
+}
+
+.infobox-img {
+    padding-top: .2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.infobox-img i{
+    color: #59443b;
+    font-size: 30px;
+}
+
+/* ----------------------------------------- */
+/* Estilos para dispositivos mayores a 568px */
+/* ----------------------------------------- */
+@media (min-width: 568px) {
+    .contenedor-infobox {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 3rem;       
+    }
+}
+
+/* --------------------------------------- */
+/* Estilos para dispositivos mayores 991px */
+/* --------------------------------------- */
+@media (min-width: 991px) {
+    .contenedor-infobox {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: 
+        "inicio centro1 final"
+        "inicio centro2 final";       
+    }
+
+    .infobox-envios  {
+        grid-area: inicio;
+        align-self: center;
+    }
+
+    .infobox-medios-pago {
+        grid-area: centro1;
+    }
+
+    .infobox-atencion {
+        grid-area: centro2;
+    }
+    
+    .infobox-garantia {
+        grid-area: final;
+        align-self: center;
+    }
+}

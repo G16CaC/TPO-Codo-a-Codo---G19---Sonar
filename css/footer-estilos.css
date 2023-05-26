@@ -1,0 +1,235 @@
+
+footer{
+    background-image: linear-gradient(#59443b, rgba(0, 0, 0, 0.87));
+}
+
+/* Estilos Newsletter-Redes sociales */
+.contenedor-newsletter{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    justify-items: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px 0px;
+    border-bottom: #fff 1px solid;
+}
+
+.contenedor-newsletter h2{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contenido-newsletter{
+    display: grid;
+    grid-template-columns: 500px;    
+}
+
+.email-newsletter{
+    width: 60%;
+    height: 30px;
+    border-radius: 5px;
+    border-style: none;
+    padding-left: 5px;
+}
+
+.btn-newsletter{
+    width: 30%;
+    height: 30px;
+    padding-bottom: 2px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: transparent;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    outline: 0px;    
+    transition: all 400ms ease;
+}
+
+.btn-newsletter:hover{
+    background-color: #fff; 
+    color: #59443b;
+}
+
+/* Estilos del mensaje de validacion Javascript - Mensaje de Advertencia */
+.advertencia-news {
+    display: block;
+    width: 90%;
+    text-align: left;
+    font-weight: 600;
+    margin: auto;
+    color: red;
+    padding-top: 10px;
+}
+
+/* Estilos del mensaje de validacion Javascript - Mensaje de Exito */
+    .mensaje-exito-news {
+    display: block;
+    width: 90%;
+    text-align: left;
+    font-weight: 600;
+    margin: auto;
+    color: greenyellow;    
+}
+  
+.contenido-redes a{
+    width: 100%;
+    color: #fff;
+    font-size: 30px;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.contenido-redes a i:hover{
+    transform: translateY(-20%);
+    transition: .5s ease;
+}
+
+/* Estilos footer */
+.contenedor-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+    padding: 30px 50px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer-links h3 {
+    position: relative;
+    margin-bottom: 34px;
+}
+
+.footer-links h3:after {
+    content: '';
+    position: absolute;
+    top: 35px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #ffffff;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-links .info li {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-bottom: 15px;
+}
+
+.footer-nav-link li {
+    line-height: 30px;
+}
+
+.copyright {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0;
+    background-image: linear-gradient(#59443b, rgba(0, 0, 0, 0.87));
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.logo-footer{
+    width: 25%;
+}
+
+/* ------------------------------------- */
+/* Estilos para dispositivos hasta 991px */
+/* ------------------------------------- */
+@media (max-width: 991px) {
+
+    .contenido-newsletter{
+    grid-template-columns: 300px;    
+    }
+
+    /* Estilos del mensaje de validacion Javascript - Mensaje de Advertencia */
+    .advertencia-news {
+        font-size: .95rem;
+        text-align: center;
+    }
+
+    /* Estilos del mensaje de validacion Javascript - Mensaje de Exito */
+    .mensaje-exito-news {
+        font-size: .95rem;
+        text-align: center;
+    }
+    
+
+    .contenedor-links{
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: start;
+        padding: 50px;
+    }
+
+    .copyright {
+        grid-template-columns: 1fr 1fr 1fr;   
+    }
+
+    .logo-footer{
+        width: 50%;
+    }
+}
+
+/* ------------------------------------- */
+/* Estilos para dispositivos hasta 568px */
+/* ------------------------------------- */
+@media (max-width: 568px) {
+
+    .contenedor-newsletter{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contenido-redes h2{
+        margin-top: 10px;
+    }
+
+    /* Estilos del mensaje de validacion Javascript - Mensaje de Advertencia */
+    .advertencia-news {
+        font-size: .95rem;
+        text-align: center;
+    }
+
+    /* Estilos del mensaje de validacion Javascript - Mensaje de Exito */
+        .mensaje-exito-news {
+        font-size: .95rem;
+        text-align: center;
+    }
+
+    .contenedor-links {
+        grid-template-columns: repeat(1, 1fr);
+        justify-items:start;
+        padding: 30px;
+    }
+
+       .copyright {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 20px;
+    }
+    
+       .logo-footer{
+        width: 30%;
+        margin-top: 5px;
+    }
+}
