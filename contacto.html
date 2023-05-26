@@ -46,7 +46,7 @@
     </section>
 
     <section class="formulario">
-        <form id="contacto-form" class="form-contacto" method="POST">
+        <form id="contacto-form">
             <fieldset id="datos">
                 <label for="nombre" id="nombre-label">Nombre: <input type="text" id="nombre-contacto"
                         placeholder="Ingresa tu Nombre" name="nombre_contacto"></label>
@@ -59,14 +59,14 @@
 
             <fieldset id="opciones">
                 <label id="opciones-label">¿Cómo podemos ayudarte?
-                    <select name="seleccion_contacto" id="seleccion-contacto">
+                    <select name="seleccion-contacto" id="seleccion-contacto">
                         <option value="">Selecciona una opción</option>
-                        <option value="Deseo dejarles una sugerencia...">Deseo dejarles una sugerencia...</option>
-                        <option value="Quiero un producto en particular...">Quiero un producto en particular...</option>
-                        <option value="¿Hacen envíos a mi localidad?...">¿Hacen envíos a mi localidad?...</option>
-                        <option value="No recibí mi producto...">No recibí mi producto...</option>
-                        <option value="Mi producto no funciona ¿Cómo procedo?">Mi producto no funciona ¿Cómo procedo?</option>
-                        <option value="Me arrepentí de la compra...">Me arrepentí de la compra...</option>
+                        <option value="Opcion1">Deseo dejarles una sugerencia...</option>
+                        <option value="Opcion2">Quiero un producto en particular...</option>
+                        <option value="Opcion3">¿Hacen envíos a mi localidad?...</option>
+                        <option value="Opcion4">No recibí mi producto...</option>
+                        <option value="Opcion5">Mi producto no funciona ¿Cómo procedo?</option>
+                        <option value="Opcion6">Me arrepentí de la compra...</option>
                     </select>
             </fieldset>
 
@@ -88,19 +88,20 @@
             <p class="contacto-copyright">Sonar © - 2023 - Todos los derechos reservados</p>
 
             <!-- Scripts para conectar al servicio de EmailJS para el envio de correos capturando el correo electrónico 
-            del usuario que se suscribe al newsletter -->
+        del usuario que se suscribe al newsletter -->
             <script type="text/javascript"
                 src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
             <script type="text/javascript">
                 emailjs.init('yE6xcu-BTxCFYdgGa')
             </script>
+
         </form>
 
     </section>
 
     <!-- Javascript -->
-    <script src="validacion-contacto.js"></script>
+    <script src="validaciones-contacto.js"></script>
 
 </body>
 
